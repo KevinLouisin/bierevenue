@@ -24,6 +24,10 @@ var server = app.listen(port, function(){
 })
 
 /* ROUTES*/
+app.get('/', function(req, res){
+	res.redirect('/home')
+})
+
 app.get('/home', function(req, res){
 	res.sendfile('./public/index.html')
 })
