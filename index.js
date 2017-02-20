@@ -37,13 +37,11 @@ app.get('/api/beers', function(req, res) {
 	
 	var beersCollection = db.collection('beers')
 	beersCollection.find({}).toArray(function(err, collection) {
-		console.log('toto')
 		if (!err) {			
 			res.send(collection)			
 		}else {
 			console.log(err)
-		}
-		
+		}		
 	})
 })
 
